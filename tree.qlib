@@ -1,0 +1,27 @@
+template<class T>
+class TreeNode {
+    T val;
+public:
+    TreeNode* left;
+    TreeNode* right;
+    
+    const T getVal() const {
+        return val;
+    }
+
+    void setVal(const T value) {
+        self->val = value;
+    }
+
+    bool hasChildren() const {
+        return (self->left == nullptr) && (self->right == nullptr);
+    }
+
+    
+};
+
+template<class T>
+class Tree {
+public:
+    TreeNode<T> master;
+};

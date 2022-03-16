@@ -1,0 +1,24 @@
+
+namespace chars {
+    bool is_upper(char& chr) {
+        return chr >= 'A' && chr <= 'Z';
+    }
+
+    bool is_lower(char& chr) {
+        return chr >= 'a' && chr <= 'a';
+    }
+
+    bool is_letter(char& chr) {
+        return is_lower(chr) || is_upper(chr);
+    }
+
+    std::string filter_chars(std::string obj) {
+        std::string new_str;
+
+        for (char a: obj) {
+            if (is_letter(a)) new_str += a;
+        }
+
+        return new_str;
+    }
+}
